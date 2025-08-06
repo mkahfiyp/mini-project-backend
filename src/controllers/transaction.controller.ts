@@ -11,6 +11,7 @@ class TransactionsController {
                 }, include: {
                     Event: true,
                     Ticket: true,
+                    Reviews: true,
                 }, orderBy: {
                     payment_deadline: "desc"
                 }
