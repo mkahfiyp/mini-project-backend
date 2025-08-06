@@ -68,7 +68,7 @@ async function main() {
                 phone: '+6281234567890',
                 role: 'ORGANIZER',
                 points: 1000,
-                referal_code: 'JOHN2024',
+                referal_code: 'JOHN2025',
                 profile_picture: 'https://example.com/john.jpg'
             }
         }),
@@ -81,7 +81,7 @@ async function main() {
                 phone: '+6281234567891',
                 role: 'CUSTOMER',
                 points: 500,
-                referal_code: 'JANE2024',
+                referal_code: 'JANE2025',
                 profile_picture: 'https://example.com/jane.jpg'
             }
         }),
@@ -94,7 +94,7 @@ async function main() {
                 phone: '+6281234567892',
                 role: 'ADMIN',
                 points: 0,
-                referal_code: 'ADMIN2024'
+                referal_code: 'ADMIN2025'
             }
         }),
         prisma.users.create({
@@ -106,7 +106,7 @@ async function main() {
                 phone: '+6281234567893',
                 role: 'ORGANIZER',
                 points: 750,
-                referal_code: 'ALICE2024'
+                referal_code: 'ALICE2025'
             }
         }),
         prisma.users.create({
@@ -118,7 +118,7 @@ async function main() {
                 phone: '+6281234567894',
                 role: 'CUSTOMER',
                 points: 300,
-                referal_code: 'BOB2024'
+                referal_code: 'BOB2025'
             }
         }),
         prisma.users.create({
@@ -130,7 +130,7 @@ async function main() {
                 phone: '+6281234567895',
                 role: 'ORGANIZER',
                 points: 1200,
-                referal_code: 'CHARLIE2024'
+                referal_code: 'CHARLIE2025'
             }
         }),
         prisma.users.create({
@@ -142,7 +142,7 @@ async function main() {
                 phone: '+6281234567896',
                 role: 'CUSTOMER',
                 points: 800,
-                referal_code: 'DIANA2024'
+                referal_code: 'DIANA2025'
             }
         })
     ]);
@@ -202,11 +202,11 @@ async function main() {
                 organizer_id: users[0].user_id, // John (Organizer)
                 category_id: categories[0].category_id, // Music
                 city_id: cities[0].city_id, // Jakarta
-                name: 'Jakarta Music Festival 2024',
+                name: 'Jakarta Music Festival 2025',
                 deskripsi: 'The biggest music festival in Jakarta featuring local and international artists',
                 price: 500000,
-                start_date: new Date('2024-12-15T18:00:00Z'),
-                end_date: new Date('2024-12-17T23:00:00Z'),
+                start_date: new Date('2025-12-15T18:00:00Z'),
+                end_date: new Date('2025-12-17T23:00:00Z'),
                 location: 'Gelora Bung Karno Stadium',
                 image: 'https://example.com/music-festival.jpg'
             }
@@ -216,11 +216,11 @@ async function main() {
                 organizer_id: users[3].user_id, // Alice (Organizer)
                 category_id: categories[1].category_id, // Sports
                 city_id: cities[0].city_id, // Jakarta
-                name: 'Marathon Jakarta 2024',
+                name: 'Marathon Jakarta 2025',
                 deskripsi: 'Annual marathon event in Jakarta with 5K, 10K, and full marathon categories',
                 price: 150000,
-                start_date: new Date('2024-11-20T06:00:00Z'),
-                end_date: new Date('2024-11-20T12:00:00Z'),
+                start_date: new Date('2025-11-20T06:00:00Z'),
+                end_date: new Date('2025-11-20T12:00:00Z'),
                 location: 'Monas Area',
                 image: 'https://example.com/marathon.jpg'
             }
@@ -230,11 +230,11 @@ async function main() {
                 organizer_id: users[0].user_id, // John (Organizer)
                 category_id: categories[2].category_id, // Technology
                 city_id: cities[0].city_id, // Jakarta
-                name: 'Tech Conference Indonesia 2024',
+                name: 'Tech Conference Indonesia 2025',
                 deskripsi: 'Leading technology conference featuring AI, blockchain, and startup trends',
                 price: 750000,
-                start_date: new Date('2024-10-25T09:00:00Z'),
-                end_date: new Date('2024-10-27T17:00:00Z'),
+                start_date: new Date('2025-10-25T09:00:00Z'),
+                end_date: new Date('2025-10-27T17:00:00Z'),
                 location: 'Jakarta Convention Center',
                 image: 'https://example.com/tech-conf.jpg'
             }
@@ -244,11 +244,11 @@ async function main() {
                 organizer_id: users[3].user_id, // Alice (Organizer)
                 category_id: categories[3].category_id, // Business
                 city_id: cities[1].city_id, // Bandung
-                name: 'Startup Summit Bandung 2024',
+                name: 'Startup Summit Bandung 2025',
                 deskripsi: 'Business networking event for startups and entrepreneurs',
                 price: 300000,
-                start_date: new Date('2024-11-10T10:00:00Z'),
-                end_date: new Date('2024-11-10T18:00:00Z'),
+                start_date: new Date('2025-11-10T10:00:00Z'),
+                end_date: new Date('2025-11-10T18:00:00Z'),
                 location: 'Trans Luxury Hotel',
                 image: 'https://example.com/startup-summit.jpg'
             }
@@ -258,11 +258,11 @@ async function main() {
                 organizer_id: users[5].user_id, // Charlie (Organizer)
                 category_id: categories[4].category_id, // Arts & Culture
                 city_id: cities[3].city_id, // Yogyakarta
-                name: 'Yogyakarta Art Festival 2024',
+                name: 'Yogyakarta Art Festival 2025',
                 deskripsi: 'Traditional and contemporary art exhibition in cultural city of Yogyakarta',
                 price: 75000,
-                start_date: new Date('2024-12-01T10:00:00Z'),
-                end_date: new Date('2024-12-03T18:00:00Z'),
+                start_date: new Date('2025-12-01T10:00:00Z'),
+                end_date: new Date('2025-12-03T18:00:00Z'),
                 location: 'Taman Budaya Yogyakarta',
                 image: 'https://example.com/art-festival.jpg'
             }
@@ -272,11 +272,11 @@ async function main() {
                 organizer_id: users[5].user_id, // Charlie (Organizer)
                 category_id: categories[5].category_id, // Food & Drink
                 city_id: cities[5].city_id, // Bali
-                name: 'Bali Food Festival 2024',
+                name: 'Bali Food Festival 2025',
                 deskripsi: 'Culinary festival showcasing Indonesian and international cuisine',
                 price: 200000,
-                start_date: new Date('2024-11-25T17:00:00Z'),
-                end_date: new Date('2024-11-27T22:00:00Z'),
+                start_date: new Date('2025-11-25T17:00:00Z'),
+                end_date: new Date('2025-11-27T22:00:00Z'),
                 location: 'Sanur Beach Area',
                 image: 'https://example.com/food-festival.jpg'
             }
@@ -286,11 +286,11 @@ async function main() {
                 organizer_id: users[0].user_id, // John (Organizer)
                 category_id: categories[6].category_id, // Education
                 city_id: cities[2].city_id, // Surabaya
-                name: 'Digital Marketing Workshop Surabaya 2024',
+                name: 'Digital Marketing Workshop Surabaya 2025',
                 deskripsi: 'Comprehensive workshop on digital marketing strategies and tools',
                 price: 350000,
-                start_date: new Date('2024-10-15T09:00:00Z'),
-                end_date: new Date('2024-10-15T17:00:00Z'),
+                start_date: new Date('2025-10-15T09:00:00Z'),
+                end_date: new Date('2025-10-15T17:00:00Z'),
                 location: 'Grand City Convention Center',
                 image: 'https://example.com/marketing-workshop.jpg'
             }
@@ -300,11 +300,11 @@ async function main() {
                 organizer_id: users[3].user_id, // Alice (Organizer)
                 category_id: categories[1].category_id, // Sports
                 city_id: cities[4].city_id, // Medan
-                name: 'Medan Basketball Championship 2024',
+                name: 'Medan Basketball Championship 2025',
                 deskripsi: 'Regional basketball championship for amateur and semi-professional teams',
                 price: 50000,
-                start_date: new Date('2024-11-05T08:00:00Z'),
-                end_date: new Date('2024-11-07T18:00:00Z'),
+                start_date: new Date('2025-11-05T08:00:00Z'),
+                end_date: new Date('2025-11-07T18:00:00Z'),
                 location: 'Medan Sports Hall',
                 image: 'https://example.com/basketball.jpg'
             }
@@ -324,8 +324,8 @@ async function main() {
                 harga: 400000,
                 kuota: 1000,
                 aktif: true,
-                start_date: new Date('2024-08-01T00:00:00Z'),
-                end_date: new Date('2024-10-31T23:59:59Z')
+                start_date: new Date('2025-08-01T00:00:00Z'),
+                end_date: new Date('2025-10-31T23:59:59Z')
             }
         }),
         prisma.tickets.create({
@@ -337,8 +337,8 @@ async function main() {
                 harga: 1000000,
                 kuota: 200,
                 aktif: true,
-                start_date: new Date('2024-08-01T00:00:00Z'),
-                end_date: new Date('2024-12-10T23:59:59Z')
+                start_date: new Date('2025-08-01T00:00:00Z'),
+                end_date: new Date('2025-12-10T23:59:59Z')
             }
         }),
         // Marathon Jakarta Tickets
@@ -351,8 +351,8 @@ async function main() {
                 harga: 100000,
                 kuota: 500,
                 aktif: true,
-                start_date: new Date('2024-09-01T00:00:00Z'),
-                end_date: new Date('2024-11-15T23:59:59Z')
+                start_date: new Date('2025-09-01T00:00:00Z'),
+                end_date: new Date('2025-11-15T23:59:59Z')
             }
         }),
         prisma.tickets.create({
@@ -364,8 +364,8 @@ async function main() {
                 harga: 200000,
                 kuota: 300,
                 aktif: true,
-                start_date: new Date('2024-09-01T00:00:00Z'),
-                end_date: new Date('2024-11-15T23:59:59Z')
+                start_date: new Date('2025-09-01T00:00:00Z'),
+                end_date: new Date('2025-11-15T23:59:59Z')
             }
         }),
         // Tech Conference Tickets
@@ -378,8 +378,8 @@ async function main() {
                 harga: 750000,
                 kuota: 800,
                 aktif: true,
-                start_date: new Date('2024-08-15T00:00:00Z'),
-                end_date: new Date('2024-10-20T23:59:59Z')
+                start_date: new Date('2025-08-15T00:00:00Z'),
+                end_date: new Date('2025-10-20T23:59:59Z')
             }
         }),
         prisma.tickets.create({
@@ -391,8 +391,8 @@ async function main() {
                 harga: 1200000,
                 kuota: 200,
                 aktif: true,
-                start_date: new Date('2024-08-15T00:00:00Z'),
-                end_date: new Date('2024-10-20T23:59:59Z')
+                start_date: new Date('2025-08-15T00:00:00Z'),
+                end_date: new Date('2025-10-20T23:59:59Z')
             }
         }),
         // Startup Summit Tickets
@@ -405,8 +405,8 @@ async function main() {
                 harga: 300000,
                 kuota: 400,
                 aktif: true,
-                start_date: new Date('2024-09-01T00:00:00Z'),
-                end_date: new Date('2024-11-05T23:59:59Z')
+                start_date: new Date('2025-09-01T00:00:00Z'),
+                end_date: new Date('2025-11-05T23:59:59Z')
             }
         }),
         // Art Festival Tickets
@@ -419,8 +419,8 @@ async function main() {
                 harga: 75000,
                 kuota: 200,
                 aktif: true,
-                start_date: new Date('2024-10-01T00:00:00Z'),
-                end_date: new Date('2024-11-30T23:59:59Z')
+                start_date: new Date('2025-10-01T00:00:00Z'),
+                end_date: new Date('2025-11-30T23:59:59Z')
             }
         }),
         prisma.tickets.create({
@@ -432,8 +432,8 @@ async function main() {
                 harga: 150000,
                 kuota: 150,
                 aktif: true,
-                start_date: new Date('2024-10-01T00:00:00Z'),
-                end_date: new Date('2024-11-30T23:59:59Z')
+                start_date: new Date('2025-10-01T00:00:00Z'),
+                end_date: new Date('2025-11-30T23:59:59Z')
             }
         }),
         // Food Festival Tickets
@@ -446,8 +446,8 @@ async function main() {
                 harga: 200000,
                 kuota: 300,
                 aktif: true,
-                start_date: new Date('2024-10-01T00:00:00Z'),
-                end_date: new Date('2024-11-20T23:59:59Z')
+                start_date: new Date('2025-10-01T00:00:00Z'),
+                end_date: new Date('2025-11-20T23:59:59Z')
             }
         }),
         // Digital Marketing Workshop Tickets
@@ -460,8 +460,8 @@ async function main() {
                 harga: 350000,
                 kuota: 100,
                 aktif: true,
-                start_date: new Date('2024-08-15T00:00:00Z'),
-                end_date: new Date('2024-10-10T23:59:59Z')
+                start_date: new Date('2025-08-15T00:00:00Z'),
+                end_date: new Date('2025-10-10T23:59:59Z')
             }
         }),
         // Basketball Championship Tickets
@@ -474,8 +474,8 @@ async function main() {
                 harga: 50000,
                 kuota: 500,
                 aktif: true,
-                start_date: new Date('2024-09-01T00:00:00Z'),
-                end_date: new Date('2024-11-01T23:59:59Z')
+                start_date: new Date('2025-09-01T00:00:00Z'),
+                end_date: new Date('2025-11-01T23:59:59Z')
             }
         })
     ]);
@@ -490,8 +490,8 @@ async function main() {
                 discount_value: 20,
                 min_purchase: 500000,
                 max_discount: 100000,
-                start_date: new Date('2024-08-01T00:00:00Z'),
-                end_date: new Date('2024-12-15T23:59:59Z')
+                start_date: new Date('2025-08-01T00:00:00Z'),
+                end_date: new Date('2025-12-15T23:59:59Z')
             }
         }),
         prisma.vouchers.create({
@@ -501,8 +501,8 @@ async function main() {
                 discount_value: 15,
                 min_purchase: 150000,
                 max_discount: 50000,
-                start_date: new Date('2024-09-01T00:00:00Z'),
-                end_date: new Date('2024-11-20T23:59:59Z')
+                start_date: new Date('2025-09-01T00:00:00Z'),
+                end_date: new Date('2025-11-20T23:59:59Z')
             }
         }),
         prisma.vouchers.create({
@@ -512,8 +512,8 @@ async function main() {
                 discount_value: 25,
                 min_purchase: 700000,
                 max_discount: 200000,
-                start_date: new Date('2024-08-15T00:00:00Z'),
-                end_date: new Date('2024-10-25T23:59:59Z')
+                start_date: new Date('2025-08-15T00:00:00Z'),
+                end_date: new Date('2025-10-25T23:59:59Z')
             }
         }),
         prisma.vouchers.create({
@@ -523,8 +523,8 @@ async function main() {
                 discount_value: 10,
                 min_purchase: 250000,
                 max_discount: 30000,
-                start_date: new Date('2024-09-01T00:00:00Z'),
-                end_date: new Date('2024-11-10T23:59:59Z')
+                start_date: new Date('2025-09-01T00:00:00Z'),
+                end_date: new Date('2025-11-10T23:59:59Z')
             }
         }),
         prisma.vouchers.create({
@@ -534,8 +534,8 @@ async function main() {
                 discount_value: 30,
                 min_purchase: 100000,
                 max_discount: 25000,
-                start_date: new Date('2024-10-01T00:00:00Z'),
-                end_date: new Date('2024-12-01T23:59:59Z')
+                start_date: new Date('2025-10-01T00:00:00Z'),
+                end_date: new Date('2025-12-01T23:59:59Z')
             }
         }),
         prisma.vouchers.create({
@@ -545,8 +545,8 @@ async function main() {
                 discount_value: 15,
                 min_purchase: 180000,
                 max_discount: 40000,
-                start_date: new Date('2024-10-01T00:00:00Z'),
-                end_date: new Date('2024-11-25T23:59:59Z')
+                start_date: new Date('2025-10-01T00:00:00Z'),
+                end_date: new Date('2025-11-25T23:59:59Z')
             }
         })
     ]);
@@ -562,9 +562,9 @@ async function main() {
                 voucher_id: vouchers[0].voucher_id,
                 user_id: users[1].user_id, // Jane (Customer)
                 used_point: 100,
-                status: 'COMPLETED',
+                status: 'done',
                 payment_proof: 'https://example.com/payment1.jpg',
-                payment_deadline: new Date('2024-09-15T23:59:59Z')
+                payment_deadline: new Date('2025-09-15T23:59:59Z')
             }
         }),
         prisma.transactions.create({
@@ -575,8 +575,8 @@ async function main() {
                 voucher_id: vouchers[1].voucher_id,
                 user_id: users[4].user_id, // Bob (Customer)
                 used_point: 50,
-                status: 'PENDING',
-                payment_deadline: new Date('2024-10-15T23:59:59Z')
+                status: 'waiting_payment',
+                payment_deadline: new Date('2025-10-15T23:59:59Z')
             }
         }),
         prisma.transactions.create({
@@ -587,9 +587,9 @@ async function main() {
                 voucher_id: vouchers[2].voucher_id,
                 user_id: users[1].user_id, // Jane (Customer)
                 used_point: 200,
-                status: 'COMPLETED',
+                status: 'done',
                 payment_proof: 'https://example.com/payment2.jpg',
-                payment_deadline: new Date('2024-09-20T23:59:59Z')
+                payment_deadline: new Date('2025-09-20T23:59:59Z')
             }
         }),
         prisma.transactions.create({
@@ -600,9 +600,9 @@ async function main() {
                 voucher_id: vouchers[3].voucher_id,
                 user_id: users[6].user_id, // Diana (Customer)
                 used_point: 75,
-                status: 'COMPLETED',
+                status: 'done',
                 payment_proof: 'https://example.com/payment3.jpg',
-                payment_deadline: new Date('2024-10-01T23:59:59Z')
+                payment_deadline: new Date('2025-10-01T23:59:59Z')
             }
         }),
         prisma.transactions.create({
@@ -613,8 +613,8 @@ async function main() {
                 voucher_id: vouchers[4].voucher_id,
                 user_id: users[4].user_id, // Bob (Customer)
                 used_point: 25,
-                status: 'PENDING',
-                payment_deadline: new Date('2024-11-15T23:59:59Z')
+                status: 'waiting_payment',
+                payment_deadline: new Date('2025-11-15T23:59:59Z')
             }
         }),
         prisma.transactions.create({
@@ -625,9 +625,9 @@ async function main() {
                 voucher_id: vouchers[5].voucher_id,
                 user_id: users[6].user_id, // Diana (Customer)
                 used_point: 100,
-                status: 'COMPLETED',
+                status: 'done',
                 payment_proof: 'https://example.com/payment4.jpg',
-                payment_deadline: new Date('2024-10-20T23:59:59Z')
+                payment_deadline: new Date('2025-10-20T23:59:59Z')
             }
         })
     ]);
