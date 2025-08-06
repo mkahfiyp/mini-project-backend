@@ -6,10 +6,136 @@
 
 generator client {
   provider = "prisma-client-js"
-  output   = "../src/generated/prisma"
+  // output   = "../src/generated/prisma"
+  output   = "./generated/client"
 }
 
 datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
+}
+
+enum ROLE {
+  CUSTOMER
+  ORGANIZER
+  ADMIN
+}
+
+model Users {
+  user_id         Int            @id @default(autoincrement())
+  name            String?
+  username        String         @unique
+  email           String         @unique
+  password        String
+  phone           String?
+  role            ROLE           @default(CUSTOMER)
+  points          Int            @default(0)
+  referal_code    String?
+  profile_picture String?
+  Events          Events[]
+  Transactions    Transactions[]
+  Reviews         Reviews[]
+}
+
+model Categories {
+  category_id Int      @id @default(autoincrement())
+  name        String
+  description String
+  Events      Events[]
+}
+
+model Cities {
+  city_id  Int      @id @default(autoincrement())
+  name     String   @unique
+  province String
+  country  String   @default("Indonesia")
+  Events   Events[]
+}
+
+model Events {
+  event_ID     Int            @id @default(autoincrement())
+  organizer_id Int
+  category_id  Int
+  city_id      Int
+  name         String
+  deskripsi    String
+  price        Float
+  start_date   DateTime
+  end_date     DateTime
+  location     String
+  image        String?
+  Tickets      Tickets[]
+  Vouchers     Vouchers[]
+  Transactions Transactions[]
+  organizer    Users          @relation(fields: [organizer_id], references: [user_id])
+  category     Categories     @relation(fields: [category_id], references: [category_id])
+  city         Cities         @relation(fields: [city_id], references: [city_id])
+}
+
+model Tickets {
+  ticket_id          Int                 @id @default(autoincrement())
+  event_id           Int
+  name               String
+  kategori           String
+  deskripsi          String
+  harga              Float
+  kuota              Int
+  aktif              Boolean
+  start_date         DateTime
+  end_date           DateTime
+  Event              Events              @relation(fields: [event_id], references: [event_ID])
+  Transactions       Transactions[]
+  TransactionTickets TransactionTicket[]
+}
+
+model Vouchers {
+  voucher_id     Int            @id @default(autoincrement())
+  event_id       Int
+  code           String
+  discount_value Float
+  min_purchase   Float
+  max_discount   Float
+  start_date     DateTime
+  end_date       DateTime
+  Event          Events         @relation(fields: [event_id], references: [event_ID])
+  Transactions   Transactions[]
+}
+
+model Transactions {
+  transaction_id     Int                 @id @default(autoincrement())
+  transaction_code   String              @unique
+  event_id           Int
+  ticket_id          Int
+  voucher_id         Int?
+  user_id            Int
+  used_point         Int                 @default(0)
+  status             String
+  payment_method     String?
+  payment_proof      String?
+  payment_deadline   DateTime
+  Event              Events              @relation(fields: [event_id], references: [event_ID])
+  Ticket             Tickets             @relation(fields: [ticket_id], references: [ticket_id])
+  Voucher            Vouchers?           @relation(fields: [voucher_id], references: [voucher_id])
+  User               Users               @relation(fields: [user_id], references: [user_id])
+  TransactionTickets TransactionTicket[]
+  Reviews            Reviews[]
+}
+
+model TransactionTicket {
+  trans_tick_id  Int          @id @default(autoincrement())
+  transaction_id Int
+  ticket_id      Int
+  quantity       Int
+  Transaction    Transactions @relation(fields: [transaction_id], references: [transaction_id])
+  Ticket         Tickets      @relation(fields: [ticket_id], references: [ticket_id])
+}
+
+model Reviews {
+  review_id      Int          @id @default(autoincrement())
+  user_id        Int
+  transaction_id Int
+  rating         Int
+  komen          String
+  User           Users        @relation(fields: [user_id], references: [user_id])
+  Transaction    Transactions @relation(fields: [transaction_id], references: [transaction_id])
 }
